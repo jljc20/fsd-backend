@@ -40,7 +40,7 @@ async function main() {
 
   // Set up Express server for health checks
   const app = express();
-  app.get("/health", (_req, res) => res.json({ status: "ok" }));
+  app.get("/", (_req, res) => res.json({ status: "ok" }));
 
   const PORT = process.env.PORT || 4000;
   app.listen(PORT, () => {
